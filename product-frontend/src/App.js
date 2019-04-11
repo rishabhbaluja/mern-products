@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import GetProducts from "./components/getProducts";
 import AddProduct from "./components/addProduct";
 import Home from "./components/home";
+import UpdateProduct from "./components/updateProduct";
 
 class App extends Component {
     render() {
@@ -49,6 +50,7 @@ class App extends Component {
                         <Route exact path="/get" component={GetProducts} />
                         <Route exact path="/add" component={AddProduct} />
                         <Route exact path="/" component={Home} />
+                        <Route exact path="/update" component={UpdateProduct} />
                     </Switch>
                 </div>
             </Router>

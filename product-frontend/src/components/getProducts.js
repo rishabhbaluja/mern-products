@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+//import { Link } from "react-router-dom";
 
 class GetProducts extends React.Component {
     constructor(props) {
@@ -30,6 +31,10 @@ class GetProducts extends React.Component {
                 console.log(err);
             });
     };
+    handleUpdate = id => {
+        localStorage.setItem("id",id);
+        return this.props.history.push("/update");
+    };
 
     render() {
         return (
@@ -57,6 +62,13 @@ class GetProducts extends React.Component {
                                             className="btn btn-danger"
                                         >
                                             Delete
+                                        </button>
+                                        &nbsp;&nbsp;
+                                        <button
+                                            onClick={() => this.handleUpdate(product._id)}
+                                            className="btn btn-warning"
+                                        >
+                                            Update
                                         </button>
                                     </td>
                                 </tr>

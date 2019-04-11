@@ -1,0 +1,5 @@
+
+# dependencies
+/product-frontend/node_modules
+/product-backend/node_modules
+/db
